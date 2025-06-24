@@ -3,11 +3,16 @@ import { Drawer } from "expo-router/drawer";
 import { Ionicons } from "@expo/vector-icons";
 import { Image } from "expo-image";
 import { TouchableOpacity, View, Text } from "react-native";
+import * as NavigationBar from 'expo-navigation-bar';
+import { useFocusEffect } from "expo-router";
+import { useCallback } from "react";
+
 
 const blurhash =
   "|rF?hV%2WCj[ayj[a|j[az_NaeWBj@ayfRayfQfQM{M|azj[azf6fQfQfQIpWXofj[ayj[j[fQayWCoeoeaya}j[ayfQa{oLj?j[WVj[ayayj[fQoff7azayj[ayj[j[ayofayayayj[fQj[ayayj[ayfjj[j[ayjuayj[";
 
 export default function Layout() {
+    
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
       <Drawer
