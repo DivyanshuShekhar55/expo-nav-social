@@ -15,7 +15,7 @@ export default function TabLayout() {
     ),
      }}>
       <Tabs.Screen
-        name="index"
+        name="(home-feed-top-nav)"
         options={{
           title: 'Feed',
           tabBarIcon: ({ color, focused }) => <Ionicons size={28} name={focused?"chatbox-ellipses":"chatbox-ellipses-outline"} color={"black"} />,

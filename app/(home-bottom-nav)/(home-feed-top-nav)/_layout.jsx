@@ -1,12 +1,22 @@
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
+import index from './index';
+
 
 const TopTab = createMaterialTopTabNavigator();
 
-function MyTabs() {
-  return (
-    <TopTab.Navigator>
-      <TopTab.Screen name="Home" component={HomeScreen} />
-      <TopTab.Screen name="Profile" component={ProfileScreen} />
-    </TopTab.Navigator>
-  );
+export default function TopTabs() {
+    return (
+        <TopTab.Navigator
+            screenOptions={{
+                tabBarStyle:{backgroundColor:"black"}
+                ,tabBarActiveTintColor:"white"
+                ,tabBarInactiveTintColor:"gray"
+            }}
+            >
+
+            <TopTab.Screen name="For Me" component={index} />
+            <TopTab.Screen name="Following" component={index} />
+
+        </TopTab.Navigator>
+    );
 }
