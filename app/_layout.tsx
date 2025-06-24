@@ -15,6 +15,7 @@ export default function Layout() {
           drawerContentStyle: { backgroundColor: "black" },
           drawerActiveTintColor: "white",
           drawerActiveBackgroundColor: "transparent",
+          drawerInactiveTintColor:"white",
           drawerHideStatusBarOnOpen: true,
           headerTitle: () => (
             <Text style={{ color: "white", fontSize: 18 }}>MySocial</Text>
@@ -47,15 +48,27 @@ export default function Layout() {
         })}
       >
         <Drawer.Screen
-          name="index" // This is the name of the page and must match the url from root
+          name="(home-bottom-nav)" // This is the name of the page and must match the url from root
           options={{
             drawerIcon: ({ focused }) => (
-              <Ionicons name="home" color="white" size={24} />
+              <Ionicons name="home-outline" color="white" size={24} />
             ),
             drawerLabel: "Home",
             title: "overview",
           }}
         />
+
+        <Drawer.Screen
+          name="Profile" // This is the name of the page and must match the url from root
+          options={{
+            drawerIcon: ({ focused }) => (
+              <Ionicons name="person-outline" color="white" size={24} />
+            ),
+            drawerLabel: "Profile",
+            title: "profile",
+          }}
+        />
+
       </Drawer>
     </GestureHandlerRootView>
   );
