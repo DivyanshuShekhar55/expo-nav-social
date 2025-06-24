@@ -17,8 +17,8 @@ export default function TabLayout() {
       <Tabs.Screen
         name="index"
         options={{
-          title: 'Home',
-          tabBarIcon: ({ color, focused }) => <Ionicons size={28} name={!focused?"home-outline":"home"} color={"black"} />,
+          title: 'Feed',
+          tabBarIcon: ({ color, focused }) => <Ionicons size={28} name={focused?"chatbox-ellipses":"chatbox-ellipses-outline"} color={"black"} />,
           
         }}
       />
